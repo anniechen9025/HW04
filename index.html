@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>!!!Code quiz!!!</title>
     <link rel="stylesheet" type="text/css" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
-<body>
-    <header>
-        <ul>
-            <li id ="highscore">High score</li>
-            <li id = "timer">Timer</li>
-        </ul>
-    </header>
-    <article>
-        <h1>Code Quiz</h1>
-        <div id = "textinput">This is a quiz to quiz your knowledge of our class :)</div>
-        <p id = "message"></p>
-        <button id = "startbutton">start</button>
-        <div id = "choices" style="display: none;">        
-            <button class = "choice1">start</button>
-            <button class = "choice1">start</button>
-            <button class = "choice1">start</button>
-        </div>
 
-    </article>
+<body>
+    <div class="container-fluid">
+        <header>
+            <ul class="row align-items-center">
+                <li class="col-6" id="highscore">Score Result</li>
+                <li class="col-6" id="timer">Timer</li>
+            </ul>
+        </header>
+        <article class="row align-items-center justify-content-center">
+            <h1 class="col-12" id="title">Code Quiz</h1>
+            <div class="col-12" id="textinput">This is a quiz to quiz your knowledge of Boot Camp :)</div>
+            <button class="col-2" id="startbutton">start</button>
+            <div id="choices"></div>
+            <form class="row align-items-center justify-content-center" id="resultrecorder" style="display: none" method="POST">
+                <label class="col-4" for="todo-text">Enter Initial: </label>
+                <input class="col-5" type="text" placeholder="Initial input..." id="record" />
+                <button class="col-3" id="submitbtn">Submit</button>
+            </form>
+            <div class="row align-items-center justify-content-center" id="highrecord" style="display: none">
+                <h2 class="col-12">High Score</h2>
+                <p class="col-12" id="clearStrg"><strong>1:</strong> <span id="user-initial"></span></p>
+                <div class="row align-items-center">
+                    <button id="reset">Go Back</button>
+                    <button id="clear">Clear High score</button>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12" id=message></div>
+                </div>
+            </div>
+
+        </article>
+    </div>
     <script src="./Assets/js/script.js"></script>
 </body>
+
 </html>
